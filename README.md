@@ -8,7 +8,7 @@ Using a persistent global state in a Next js website is much more daunting than 
 
 ## Why this boileplate?
 
-Let's face it. Everyone hates boilerplate code! Me too. But redux is a exception. Copy and pasting redux boilerplate code without understanding seems a norm to people who are relatively new to the redux ecosystem. If you are new to redux, you may use this boilerplate to copy and paste and attain the functionality right away. Okay, you can do this. But it will be more helpful, if you understand the code and implement it by yourself. You may take the help from this boilerplate code. I didn't find a boilerplate like this in the next js example section. I decided to write one for myself!
+Copy and pasting redux boilerplate code without understanding seems a norm to people who are relatively new to the redux ecosystem. If you are new to redux, you may use this boilerplate to copy and paste and attain the functionality right away. Okay, you can do this. But it will be more helpful if you understand the code and implement it by yourself. You may take help from this boilerplate code. I didn't find a boilerplate like this in the next js example section. Besides I used hook every time in my redux code. hooks in redux are elegant and powerful. I decided to write one for myself!
 
 ## Enough Talk, Show me the code
 
