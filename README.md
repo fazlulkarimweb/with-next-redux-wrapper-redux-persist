@@ -1,14 +1,16 @@
-# Boilerplate for Next Redux Wrapper with Redux Persist (& redux-thunk too) for a Next Js project
+# Boilerplate for Next Redux Wrapper with Redux Persist (& redux-thunk too) for Next JS project 😍
 
-My problem was that I needed a simple persistent global state for my Next.js website. This is a redux boilerplate and I wrote it for myself at first to speed up my future project. You may need this code to understand the process. If you want to use this in your project, feel free to use it.
+My problem was that I needed a simple persistent global state for my Next.js website. This is a redux boilerplate and I wrote it for myself at first to speed up my future project.
 
-Using a persistent global state in a Next js website is much more daunting than I thought! See my [twitter](https://twitter.com/fazlulkarimweb/status/1266463218265812992). You have to have a solid understanding of client-side and server-side rendering & how Next js is dealing with it! Obviously don't forget about the persistency feature and some performance drawbacks of in case of server-side rendering. So I created this boilerplate with a counter app example.
+Using a persistent global state in a Next js website is much more daunting than I thought! See my [twitter](https://twitter.com/fazlulkarimweb/status/1266463218265812992) 😂. You have to have a solid understanding of client-side and server-side rendering & how Next js is dealing with it! Obviously don't forget about the persistency feature and some performance drawbacks of in case of server-side rendering. So I created this boilerplate with a classic counter app example.
 
 ![Counter Example](https://github.com/fazlulkarimweb/with-next-redux-wrapper-redux-persist/blob/master/public/Homepage.gif?raw=true)
 
-## Why this boileplate?
+## Why this boileplate? 😰
 
-Copy and pasting redux boilerplate code without understanding seems a norm to people who are relatively new to the redux ecosystem. If you are new to redux, you may use this boilerplate to copy and paste and attain the functionality right away. Okay, you can do this. But it will be more helpful if you understand the code and implement it by yourself. You may take help from this boilerplate code. I didn't find a boilerplate like this in the next js example section. Besides I used hook every time in my redux code. hooks in redux are elegant and powerful. I decided to write one for myself!
+Copy and pasting redux boilerplate code without understanding seems a norm to people who are relatively new to the redux ecosystem. If you are new to redux, you may use this boilerplate to copy and paste and attain the functionality right away. Okay, you can do this. But it will be more helpful if you understand the code and implement it by yourself. You may take help from this boilerplate code. I didn't find a boilerplate like this in the next js example section. Besides I used hook every time in my redux code. The example in the next js repo weren't written with the hooks. Hooks in redux are elegant and powerful.😍
+
+So I decided to write one for myself!
 
 ## Enough Talk, Show me the code
 
@@ -78,7 +80,7 @@ Screenshot for understanding the file structure along with the code.
 
 ## External API call & NEXT RUN BUILD
 
-I tried to add some external API call to see the hydration and rehydration process. A look into the SSG, Static & SSR rendering of the pages in this boilerplate. Seems good to me.
+I tried to add some external API call to see the hydration and rehydration process. Have a look into the SSG, Static & SSR rendering of the pages in this boilerplate. Seems good to me.
 
 ![Code with the file structure](https://github.com/fazlulkarimweb/with-next-redux-wrapper-redux-persist/blob/master/public/Next_Build.png?raw=true)
 
