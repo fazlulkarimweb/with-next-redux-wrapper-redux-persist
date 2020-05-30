@@ -1,4 +1,4 @@
-## Next Redux Wrapper along with Redux Persist (& redux-thunk too) - A boilerplate for NEXT JS projects with redux
+## Next Redux Wrapper along with Redux Persist (& redux-thunk too) - A boilerplate for NEXT JS projects with persistent global state
 
 My problem was that I needed a simple persistent global state for my Next.js website. This is a redux boilerplate and I wrote it for myself at first to speed up my future project.
 
