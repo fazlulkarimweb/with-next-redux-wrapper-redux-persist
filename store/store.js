@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { createWrapper, HYDRATE } from "next-redux-wrapper";
 import thunkMiddleware from "redux-thunk";
-import counter from "../store/counter/reducer";
+import counter from "./counter/reducer";
 
 //COMBINING ALL REDUCERS
 const combinedReducer = combineReducers({
@@ -20,17 +20,17 @@ const bindMiddleware = (middleware) => {
 
 const makeStore = ({ isServer }) => {
   if (isServer) {
-    //If it's on server side, create a store simply
+    //If it's on server side, create a store
     return createStore(combinedReducer, bindMiddleware([thunkMiddleware]));
   } else {
-    //If it's on client side, create a store with a persistability feature
+    //If it's on client side, create a store which will persist
     const { persistStore, persistReducer } = require("redux-persist");
     const storage = require("redux-persist/lib/storage").default;
 
     const persistConfig = {
       key: "nextjs",
       whitelist: ["counter"], // make sure it does not clash with server keys
-      storage,
+      storage, // use a safer storage
     };
 
     const persistedReducer = persistReducer(persistConfig, combinedReducer);
