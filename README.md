@@ -2,7 +2,7 @@
 
 My problem was that I needed a simple persistent global state for my Next.js website. This is a redux boilerplate and I wrote it for myself at first to speed up my future project.
 
-Using a persistent global state in a Next js website is much more daunting than I thought! See my angry [twitter](https://twitter.com/fazlulkarimweb/status/1266463218265812992) 😂. You have to have a solid understanding of client-side and server-side rendering & how Next js is dealing with it! Obviously don't forget about the persistency feature and some performance drawbacks of in case of server-side rendering. So I created this boilerplate with a classic counter app example.
+Using a persistent global state in a Next js website is much more daunting than I thought! See my angry [tweet](https://twitter.com/fazlulkarimweb/status/1266463218265812992) 😂. You have to have a solid understanding of client-side and server-side rendering & how Next js is dealing with it! Obviously don't forget about the persistency feature and some performance drawbacks in the case of server-side rendering. So I created this boilerplate containing a classic counter app example.
 
 ![Counter Example](https://github.com/fazlulkarimweb/with-next-redux-wrapper-redux-persist/blob/master/public/Homepage.gif?raw=true)
 
@@ -87,8 +87,6 @@ I tried to add some external API call to see the hydration and rehydration proce
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update the tests as appropriate.
 
 ## License
 
