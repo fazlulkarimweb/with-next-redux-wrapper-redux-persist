@@ -18,11 +18,10 @@ What should be the structure of your redux store?
 
 ```javascript
 // ./store/store
-
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { createWrapper, HYDRATE } from "next-redux-wrapper";
 import thunkMiddleware from "redux-thunk";
-import counter from "../store/counter/reducer";
+import counter from "./counter/reducer";
 
 //COMBINING ALL REDUCERS
 const combinedReducer = combineReducers({
@@ -41,30 +40,33 @@ const bindMiddleware = (middleware) => {
 
 const makeStore = ({ isServer }) => {
   if (isServer) {
-    //If it's on server side, create a store simply
+    //If it's on server side, create a store
     return createStore(combinedReducer, bindMiddleware([thunkMiddleware]));
   } else {
-    //If it's on client side, create a store with a persistability feature
+    //If it's on client side, create a store which will persist
     const { persistStore, persistReducer } = require("redux-persist");
     const storage = require("redux-persist/lib/storage").default;
 
     const persistConfig = {
       key: "nextjs",
-      whitelist: ["counter"], // make sure it does not clash with server keys
-      storage,
+      whitelist: ["counter"], // only counter will be persisted, add other reducers if needed
+      storage, // if needed, use a safer storage
     };
 
-    const persistedReducer = persistReducer(persistConfig, combinedReducer);
+    const persistedReducer = persistReducer(persistConfig, combinedReducer); // Create a new reducer with our existing reducer
+
     const store = createStore(
       persistedReducer,
       bindMiddleware([thunkMiddleware])
-    );
-    store.__persistor = persistStore(store);
+    ); // Creating the store again
+
+    store.__persistor = persistStore(store); // This creates a persistor object & push that persisted object to .__persistor, so that we can avail the persistability feature
+
     return store;
   }
 };
 
-// export an assembled wrapper
+// Export the wrapper & wrap the pages/_app.js with this wrapper only
 export const wrapper = createWrapper(makeStore);
 ```
 
