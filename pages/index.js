@@ -1,7 +1,7 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { incrementCounter, decrementCounter } from "../store/counter/action";
-import Link from "next/link";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { incrementCounter, decrementCounter } from '../store/counter/action';
+import Link from 'next/link';
 
 function counter() {
   const globalState = useSelector((state) => state.counter.counter);
@@ -13,7 +13,7 @@ function counter() {
       <button onClick={() => dispatch(incrementCounter(globalState))}>
         Increment +
       </button>
-      {"  "}
+      {'  '}
       <button onClick={() => dispatch(decrementCounter(globalState))}>
         Decrement -
       </button>

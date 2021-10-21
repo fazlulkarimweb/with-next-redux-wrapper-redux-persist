@@ -1,6 +1,6 @@
 {
   "name": "nextjs-ssr",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "next-redux-wrapper-redux-thunk",
   "main": "index.js",
   "scripts": {
@@ -11,14 +11,14 @@
   "author": "MD FAZLUL KARIM",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2",
-    "next": "^9.4.2",
-    "next-redux-wrapper": "^6.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
+    "axios": "^0.23.0",
+    "next": "^11.1.2",
+    "next-redux-wrapper": "^7.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0"
   },

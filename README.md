@@ -1,3 +1,5 @@
+> **✅ Update:** 2.0.0 is launched with major updates (October 21, 2021). All packages are updated to the latest day. React 17+ and Next 11+ is added. Redux persist storage is reorganized. No breaking changes. Everything is tested. Thanks for your overwhelming love and support. ✌
+
 ## Next Redux Wrapper along with Redux Persist (& redux-thunk too) - A ready boilerplate for NEXT JS projects with persistent global state ✨
 
 I just needed a simple persistent global state for my Next.js website. This is a redux boilerplate and I wrote it for myself at first to speed up my future project. Now I added extensive comment to help people understanding the whole implementation.
