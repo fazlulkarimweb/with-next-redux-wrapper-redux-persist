@@ -1,4 +1,4 @@
-> **✅ Update:** 2.0.0 is launched with major updates (October 21, 2021). All packages are updated to the latest version. React 17+ and Next 11+ is added. Redux persist storage is reorganized. No breaking changes. Everything is tested. Thanks for your overwhelming love and support. ✌
+> **✅ Update:** 2.0.0 is launched with major updates. All packages are updated to the latest version. React 17+ and Next 11+ is added. Redux persist storage is reorganized. Everything is tested. Thanks for your overwhelming love and support. ✌
 
 ## Next Redux Wrapper along with Redux Persist (& redux-thunk too) - A ready boilerplate for NEXT JS projects with persistent global state ✨
 
