@@ -50,9 +50,6 @@ const makeStore = ({ isServer }) => {
   } else {
     //If it's on client side, create a store which will persist
     const { persistStore, persistReducer } = require('redux-persist');
-    // If you bother about the error redux-persist failed to create sync storage. falling back to noop storage....comment the next line and uncomment the second line. See more on - https://github.com/vercel/next.js/discussions/15687 Though it's a unresolved issue in many instances.
-    // const storage = require('redux-persist/lib/storage').default;
-    // const storage = require('./sync_storage');
 
     const persistConfig = {
       key: 'nextjs',
@@ -75,6 +72,7 @@ const makeStore = ({ isServer }) => {
 
 // Export the wrapper & wrap the pages/_app.js with this wrapper only
 export const wrapper = createWrapper(makeStore);
+
 ```
 
 View the file structure along with the code

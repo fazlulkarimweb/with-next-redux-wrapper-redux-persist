@@ -28,7 +28,7 @@ function counter() {
         <br />
         Because the global state is persistent
         <br />
-        and saved in the localstorage.
+        and saved in the localstorage!
       </p>
 
       <Link href="/counter">
