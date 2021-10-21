@@ -20,10 +20,13 @@ What should be the structure of your redux store?
 
 ```javascript
 // ./store/store
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import { createWrapper, HYDRATE } from "next-redux-wrapper";
-import thunkMiddleware from "redux-thunk";
-import counter from "./counter/reducer";
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createWrapper, HYDRATE } from 'next-redux-wrapper';
+import thunkMiddleware from 'redux-thunk';
+import counter from './counter/reducer';
+import storage from './sync_storage';
+// If you don't bother about the error redux-persist failed to create sync storage. falling back to noop storage...uncomment the next line and comment out the previous import. See more on - https://github.com/vercel/next.js/discussions/15687
+// const storage = require('redux-persist/lib/storage').default;
 
 //COMBINING ALL REDUCERS
 const combinedReducer = combineReducers({
@@ -33,8 +36,8 @@ const combinedReducer = combineReducers({
 
 // BINDING MIDDLEWARE
 const bindMiddleware = (middleware) => {
-  if (process.env.NODE_ENV !== "production") {
-    const { composeWithDevTools } = require("redux-devtools-extension");
+  if (process.env.NODE_ENV !== 'production') {
+    const { composeWithDevTools } = require('redux-devtools-extension');
     return composeWithDevTools(applyMiddleware(...middleware));
   }
   return applyMiddleware(...middleware);
@@ -46,12 +49,14 @@ const makeStore = ({ isServer }) => {
     return createStore(combinedReducer, bindMiddleware([thunkMiddleware]));
   } else {
     //If it's on client side, create a store which will persist
-    const { persistStore, persistReducer } = require("redux-persist");
-    const storage = require("redux-persist/lib/storage").default;
+    const { persistStore, persistReducer } = require('redux-persist');
+    // If you bother about the error redux-persist failed to create sync storage. falling back to noop storage....comment the next line and uncomment the second line. See more on - https://github.com/vercel/next.js/discussions/15687 Though it's a unresolved issue in many instances.
+    // const storage = require('redux-persist/lib/storage').default;
+    // const storage = require('./sync_storage');
 
     const persistConfig = {
-      key: "nextjs",
-      whitelist: ["counter"], // only counter will be persisted, add other reducers if needed
+      key: 'nextjs',
+      whitelist: ['counter'], // only counter will be persisted, add other reducers if needed
       storage, // if needed, use a safer storage
     };
 
