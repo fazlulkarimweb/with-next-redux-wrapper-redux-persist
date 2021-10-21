@@ -5,8 +5,12 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 function MyApp({ Component, pageProps }) {
   const store = useStore((state) => state);
-  return (
+  return process.browser ? (
     <PersistGate persistor={store.__persistor} loading={<div>Loading</div>}>
+      <Component {...pageProps} />
+    </PersistGate>
+  ) : (
+    <PersistGate persistor={store}>
       <Component {...pageProps} />
     </PersistGate>
   );
